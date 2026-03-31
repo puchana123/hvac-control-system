@@ -46,5 +46,5 @@ Using [IoT MQTT Planel](https://play.google.com/store/apps/details?id=snr.lab.io
     * Solution: Adding Status Feedback System by sending realtime fan status in Topic status to display as LED light on dashboard.
 
 ##  Project Links
-* Simulation: Wokwi Project Link
+* Simulation: [Wokwi Project Link](https://wokwi.com/projects/459270536350682113)
 * Broker: [HiveMQ Cloud](https://www.hivemq.com/agent/)
