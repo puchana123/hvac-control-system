@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "author": "Puchana Numpud",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -230.1,
+      "left": 23.4,
+      "attrs": { "temperature": "24.6" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 102.4,
+      "left": 226.4,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -157.2,
+      "left": 243.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -81.6,
+      "left": 239.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 44.6,
+      "left": 230.4,
+      "attrs": { "color": "green", "xray": "1", "bounce": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v28.8", "h-225.79" ] ],
+    [ "esp:GND.2", "dht1:GND", "black", [ "h62.44", "v-57.6", "h-96" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v57.6", "h67.3", "v230.4" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h-48", "v-105.6" ] ],
+    [ "lcd1:VCC", "esp:5V", "red", [ "h-19.2", "v96.1", "h-206.59" ] ],
+    [ "led1:A", "r1:1", "orange", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "btn1:1.l", "esp:14", "cyan", [ "h-28.8", "v-67.2", "h-220.8", "v144" ] ],
+    [ "btn1:2.l", "esp:GND.2", "black", [ "h-48", "v-47.8" ] ],
+    [ "r1:2", "esp:12", "orange", [ "v27.6", "h-307.2", "v163.2" ] ],
+    [ "lcd1:SCL", "esp:22", "magenta", [ "h-67.2", "v-114.9" ] ],
+    [ "lcd1:SDA", "esp:21", "blue", [ "h-96", "v-76.6" ] ]
+  ],
+  "dependencies": {}
+}

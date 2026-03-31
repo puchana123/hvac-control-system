@@ -1,0 +1,19 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// --- WiFi Configuration ---
+const char* WIFI_SSID = "Wokwi-GUEST";
+const char* WIFI_PASS = "";
+
+// --- MQTT Configuration (HiveMQ Cloud) ---
+const char* MQTT_BROKER   = "HIVEMQ_CLOUD_URL.s1.eu.hivemq.cloud"; // HiveMQ Cloud Hostname
+const int   MQTT_PORT     = 8883;                         // Port SSL/TLS
+const char* MQTT_USER     = "MQTT_USERNAME";              // MQTT Credentials
+const char* MQTT_PASS     = "MQTT_PASSWORD";
+const char* CLIENT_ID     = "CLIENT_ID";          // Device Name
+
+// --- MQTT Topics ---
+const char* TOPIC_STATUS  = "factory/hvac/status";
+const char* TOPIC_CONTROL = "factory/hvac/control";
+
+#endif
